@@ -5,21 +5,21 @@ pipeline {
         stage ('Compile Stage') {
             steps {
                 withMaven(maven: 'maven_3.3.9') {
-                    sh 'mvn clean compile'
+                    sh '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/MAVEN/bin/mvn clean compile'
                 }
             }
         }
         stage ('Testing Stage') {
             steps {
                 withMaven(maven: 'maven_3.3.9') {
-                    sh 'mvn test'
+                    sh '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/MAVEN/bin/mvn test'
                 }
             }
         }
         stage ('Deployment Stage') {
             steps {
                 withMaven(maven: 'maven_3.3.9') {
-                    sh 'mvn deploy'
+                    sh '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/MAVEN/bin/mvn deploy'
                 }
             }
         }
