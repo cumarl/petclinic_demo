@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 node {
-    wrap([$class: 'AnsiColorBuildWrapper']) {
+    wrap([$class: 'SimpleBuildWrapper']) {
         stage('HelloWorld') {
             echo 'Hello World'
         }
