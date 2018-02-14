@@ -5,6 +5,6 @@ node {
   }
 
   stage('git clone') {
-    git clone "ssh://git@github.com:hamid2013/spring-petclinic.git"
+    git clone "https://github.com/hamid2013/spring-petclinic.git"
   }
 }
